@@ -13,5 +13,5 @@ export default defineNuxtConfig({
         public: {
             apiBase: 'http://192.168.1.108:3000/'
         }
-    }
+    },
 })
