@@ -23,29 +23,11 @@ const loginForm = () => {
             password: my_password.value
         }
     }).then((res) => {
-        res.data.statusCode === 200 ? console.log(res.data) : alert(res.data.statusCode + "\n " + res.data.statusMessage)
+        res.data.statusCode === 200 ? router.push("/dashboard") : alert(res.data.statusCode + "\n " + res.data.statusMessage)
 
     }).catch((err)=> console.log(err)
     )
 }
-
-/*
-const router = useRouter()
-onMounted(()=>{
-    axios({
-        method: "post",
-        url: "/api/logIn",
-        data: {
-            username: "saharhallaji",
-            password: "12345",
-        }
-    }).then((response) => {
-        response.data.statusCode === 200 ? router.push('/dashboard') : alert(response.data.statusMessage)
-    }).catch((err) => {
-        console.log(err)
-    })
-})
-*/
 
 </script>
 
